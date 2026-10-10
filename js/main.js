@@ -1,0 +1,4 @@
+document.addEventListener('DOMContentLoaded',()=>{const menu=document.getElementById('menuBtn'),links=document.getElementById('navLinks');if(menu)menu.onclick=()=>links.classList.toggle('open');
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.filter-card').forEach(card=>{card.style.display=(f==='all'||card.dataset.category.includes(f))?'block':'none'})}));
+const form=document.getElementById('contactForm');if(form)form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('formMsg').textContent='Thank you! Your enquiry has been received. (Demo form — no email was sent.)';form.reset()});
+});
